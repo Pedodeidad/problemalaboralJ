@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psicología | Problema Laboral 📂</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=MS+Sans+Serif&family=Pixelify+Sans:wght@400;700&display=swap');
+
+        :root {
+            --copper: #b87333;
+            --rose-gold: #e5b39b;
+            --soft-pink: #f4dcd6;
+            --win-gray: #dfdfdf;
+            --win-dark: #808080;
+        }
+
+        body {
+            background-color: #d2a69d;
+            background-image: linear-gradient(45deg, #d2a69d 25%, #c6938a 25%, #c6938a 50%, #d2a69d 50%, #d2a69d 75%, #c6938a 75%, #c6938a 100%);
+            background-size: 4px 4px;
+            font-family: 'Tahoma', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* --- TASKBAR --- */
+        .taskbar {
+            width: 100%;
+            background: var(--win-gray);
+            border-bottom: 2px solid var(--win-dark);
+            padding: 5px 20px;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            gap: 20px;
+        }
+
+        .logo-container img { height: 40px; filter: sepia(0.5); }
+
+        nav ul { list-style: none; display: flex; margin: 0; padding: 0; gap: 5px; }
+        
+        nav a {
+            text-decoration: none; color: black; font-size: 13px;
+            background: var(--win-gray); padding: 8px 15px;
+            border-top: 2px solid white; border-left: 2px solid white;
+            border-right: 2px solid var(--win-dark); border-bottom: 2px solid var(--win-dark);
+            display: block;
+        }
+
+        nav a.active {
+            background: var(--rose-gold);
+            border-top: 2px solid var(--win-dark); border-left: 2px solid var(--win-dark);
+            border-right: 2px solid white; border-bottom: 2px solid white;
+        }
+
+        /* --- WINDOW --- */
+        .window {
+            width: 90%; max-width: 950px;
+            background: var(--win-gray);
+            border: 3px solid white;
+            border-right: 3px solid var(--win-dark);
+            border-bottom: 3px solid var(--win-dark);
+            margin: 40px 0;
+            box-shadow: 10px 10px 0px rgba(0,0,0,0.2);
+        }
+
+        .window-title {
+            background: linear-gradient(90deg, #4e342e, var(--copper));
+            color: white; padding: 5px 10px; font-weight: bold;
+            display: flex; justify-content: space-between;
+            font-family: 'Pixelify Sans', cursive;
+        }
+
+        .window-body {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 20px;
+        }
+
+        .main-content {
+            background: white;
+            padding: 25px;
+            border: 2px inset var(--win-gray);
+            height: 500px;
+            overflow-y: auto;
+        }
+
+        h1 { color: #4e342e; font-size: 26px; border-bottom: 2px solid var(--rose-gold); padding-bottom: 10px; }
+        
+        .mental-note {
+            background: #fdf2f9;
+            border-left: 5px solid var(--rose-gold);
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #4e342e;
+        }
+
+        /* --- TEACHER CARD --- */
+        .teacher-box {
+            background: var(--win-gray);
+            border: 2px outset white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .teacher-photo {
+            width: 120px; height: 120px;
+            border: 3px inset var(--win-gray);
+            margin-bottom: 10px;
+            object-fit: cover;
+            background: white;
+        }
+
+        .doc-image {
+            width: 100%; border: 2px inset var(--win-gray);
+            margin-bottom: 15px;
+        }
+
+        .status-bar {
+            background: var(--win-gray);
+            border-top: 2px solid var(--win-dark);
+            padding: 3px 10px; font-size: 11px;
+        }
+
+    </style>
+</head>
+<body onclick="playMusic()">
+
+    <audio id="bgMusic" loop>
+        <source src="cancion.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="taskbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="admin.html">Admin II</a></li>
+                <li><a href="historia.html">Conciencia</a></li>
+                <li><a href="comu.html">Comunicación</a></li>
+                <li><a href="psico.html" class="active">Psicología</a></li>
+                <li><a href="organismos.html">Organismos</a></li>
+                <li><a href="user.html">Editores</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="window">
+        <div class="window-title">
+            <span>MIND_READER.EXE</span>
+            <span>[ ? ] [ _ ] [ X ]</span>
+        </div>
+        
+        <div class="window-body">
+            <div class="main-content">
+                <h1>Psicología II</h1>
+                <p>Estudio de los procesos cognitivos y el comportamiento para la optimización del clima laboral.</p>
+                
+                <div class="mental-note">
+                    <b>Análisis del Sistema:</b> La comprensión de la conducta humana permite anticipar y mitigar el estrés y la frustración en los equipos de trabajo.
+                </div>
+
+                <h2>Bases del Comportamiento</h2>
+                <p>En el marco del proyecto <i>Problema Laboral</i>, la psicología nos enseña a valorar la salud mental como un pilar de la productividad. Analizamos desde el funcionamiento neuronal hasta los procesos de aprendizaje y memoria que definen a cada trabajador.</p>
+                
+                <ul style="line-height: 2;">
+                    <li>Funcionamiento del Sistema Nervioso Central.</li>
+                    <li>Procesos de Sensación y Percepción aplicados.</li>
+                    <li>Estrategias de Atención y Memoria en el trabajo.</li>
+                    <li>Inteligencia emocional y resolución de problemas.</li>
+                </ul>
+
+                <p>El recurso más valioso de cualquier organización es la mente de sus integrantes. Este módulo nos prepara para gestionar el talento humano con sensibilidad y conocimiento científico.</p>
+            </div>
+
+            <div class="side-panel">
+                <img src="psico_copper.png" class="doc-image" alt="Psicología">
+                
+                <div class="teacher-box">
+                    <img src="img4.png" class="teacher-photo" alt="Profe Bertha">
+                    <div style="font-weight: bold; font-size: 14px;">Bertha Gabriela Piña</div>
+                    <div style="font-size: 12px; color: var(--copper);">DOCENTE DE PSICOLOGÍA</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="status-bar">
+            Procesando datos... | Memoria libre: 85% | 2026
+        </div>
+    </div>
+
+    <script>
+        function playMusic() {
+            var audio = document.getElementById("bgMusic");
+            if (audio.paused) { audio.play(); }
+        }
+    </script>
+</body>
+</html>
